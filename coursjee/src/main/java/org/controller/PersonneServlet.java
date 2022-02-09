@@ -41,27 +41,23 @@ public class PersonneServlet extends HttpServlet {
             p.setPrenom(prenom);
             p.setNum(numero);
             liste.add(p);
-        } else if (operation.equals("modification")) {
+        } else if (operation.equals("modif")) {
             for (Personne personne : liste) {
-                if (personne.getNum() == p.getNum()) {
+                if (personne.getNum() == numero) {
                     personne.setPrenom(nom);
                     personne.setPrenom(prenom);
                 }
             }
-        } else if (operation.equals("suppression")) {
-            for (Personne personne : liste) {
-                if (personne.getNum() == p.getNum()) {
-                    liste.remove(personne);
-                }
-            }
+        } else if (operation.equals("suppr")) {
+            liste.removeIf(personne -> personne.getNum() == numero);
         } else if (operation.equals("recherche")) {
+            boolean trouve = false;
             for (Personne personne : liste) {
-                if (personne.getNum() == p.getNum()) {
-                    response.getWriter().print("Personne trouvée : " + personne);
-                } else {
-                    response.getWriter().print("Personne non trouvée");
+                if (personne.getNum() == numero) {
+                    trouve = true;
                 }
             }
+            response.getWriter().print(trouve ? "Personne trouvée" : "Personne non trouvée");
         }
 
         //sérialiser la nouvelle liste
