@@ -30,7 +30,7 @@ dist/
 nbdist/
 .nb-gradle/
 
-### PHP Storm ###
+### Jetbrains ###
 .idea/
 
 ### Composer ###
