@@ -21,8 +21,9 @@
     </div>
     <hr>
     <div>
-        <input type="submit" name="enregistrer" value="envoyer">
+        <input type="submit" name="soumettre" value="enregistrer">
     </div>
 </form>
+<a href="/coursjsp_war_exploded/personne?operation=menu">Retour au menu</a>
 </body>
 </html>

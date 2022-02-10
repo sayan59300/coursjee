@@ -23,54 +23,34 @@ public class PersonneServlet extends HttpServlet {
         liste = getAncienneListe();
 
         //traitement en fonction de l'opération
-        if (operation.equals("ajout")) {
+        if (operation.equals("menu")) {
+            this.getServletContext().getRequestDispatcher("/WEB-INF/personne/menuPersonne.jsp").forward(request, response);
+        } else if (operation.equals("ajout")) {
             this.getServletContext().getRequestDispatcher("/WEB-INF/personne/ajoutPersonne.jsp").forward(request, response);
-        } else if (operation.equals("modif")) {
-            p.setNom((String) request.getAttribute("nom"));
-            p.setPrenom((String) request.getAttribute("prenom"));
-            p.setNum((int) request.getAttribute("numero"));
+        } else if (operation.equals("modification")) {
             for (Personne personne : liste) {
-                if (personne.getNum() == (int) request.getAttribute("numero")) {
-                    personne.setPrenom((String) request.getAttribute("nom"));
-                    personne.setPrenom((String) request.getAttribute("prenom"));
+                if (personne.getNum() == Integer.parseInt(request.getParameter("numero"))){
+                    request.setAttribute("personne", personne);
                 }
             }
-        } else if (operation.equals("suppr")) {
-            liste.removeIf(personne -> personne.getNum() == (int) request.getAttribute("numero"));
-        }
-
-        //sérialiser la nouvelle liste
-        serializeNouvelleListe(liste);
-
-        //affichage
-        if (operation.equals("lister")){
+            this.getServletContext().getRequestDispatcher("/WEB-INF/personne/modifPersonne.jsp").forward(request, response);
+        } else if (operation.equals("suppression")) {
+            liste.removeIf(personne -> personne.getNum() == Integer.parseInt(request.getParameter("numero")));
+            this.getServletContext().getRequestDispatcher("/WEB-INF/personne/menuPersonne.jsp").forward(request, response);
+        } else if (operation.equals("lister")){
             try {
                 FileInputStream fis = new FileInputStream(FILE_NAME);
                 ObjectInputStream ois = new ObjectInputStream(fis);
                 liste = (ArrayList<Personne>) ois.readObject();
-                String affiche = "<table>\n" +
-                        "    <tr>\n" +
-                        "        <th>Numéro</th>\n" +
-                        "        <th>Nom</th>\n" +
-                        "        <th>Prénom</th>\n" +
-                        "    </tr>";
-                for (Personne personne : liste) {
-                    affiche += "<tr>\n" +
-                            "        <td>" + personne.getNum() + "</td>\n"+
-                            "        <td>" + personne.getNom() + "</td>\n" +
-                            "        <td>" + personne.getPrenom() + "</td>\n" +
-                            "    </tr>";
-                }
-                affiche += "\n" +
-                        "</table>";
-                System.out.print(affiche);
-                request.setAttribute("tableau", affiche);
+                request.setAttribute("liste", liste);
                 this.getServletContext().getRequestDispatcher("/WEB-INF/personne/listePersonnes.jsp").forward(request, response);
                 ois.close();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+        //sérialiser la nouvelle liste
+        serializeNouvelleListe(liste);
 
     }
 
@@ -83,13 +63,26 @@ public class PersonneServlet extends HttpServlet {
         liste = getAncienneListe();
 
         //traitement en fonction de l'opération
-        if (request.getParameter("enregistrer").equals("envoyer")) {
+        if (operation.equals("ajout")) {
             p.setNom((String) request.getParameter("nom"));
             p.setPrenom((String) request.getParameter("prenom"));
             p.setNum(Integer.parseInt(request.getParameter("numero")));
             liste.add(p);
             serializeNouvelleListe(liste);
-            this.getServletContext().getRequestDispatcher("/WEB-INF/personne/listePersonnes.jsp").forward(request, response);
+            this.getServletContext().getRequestDispatcher("/WEB-INF/personne/menuPersonne.jsp").forward(request, response);
+        }else if (operation.equals("modifier")) {
+            p.setNom((String) request.getParameter("nom"));
+            p.setPrenom((String) request.getParameter("prenom"));
+            p.setNum(Integer.parseInt(request.getParameter("numero")));
+            for (Personne personne : liste) {
+                if(personne.getNum() == p.getNum()) {
+                    personne.setNum(p.getNum());
+                    personne.setNom(p.getNom());
+                    personne.setPrenom(p.getPrenom());
+                }
+            }
+            serializeNouvelleListe(liste);
+            this.getServletContext().getRequestDispatcher("/WEB-INF/personne/menuPersonne.jsp").forward(request, response);
         }
 
     }

@@ -14,13 +14,10 @@
 <hr>
 <ul>
     <li>
-        <a href="/coursjsp_war_exploded/hello" target="_blank">Hello</a>
+        <a href="/coursjsp_war_exploded/hello">Hello</a>
     </li>
     <li>
-        <a href="/coursjsp_war_exploded/calcul" target="_blank">Calcul</a>
-    </li>
-    <li>
-        <a href="/coursjsp_war_exploded/personne?operation=lister" target="_blank">Personne</a>
+        <a href="/coursjsp_war_exploded/personne?operation=menu">Personne</a>
     </li>
 </ul>
 </body>
