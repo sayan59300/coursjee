@@ -20,7 +20,7 @@
         <a href="/coursjsp_war_exploded/calcul" target="_blank">Calcul</a>
     </li>
     <li>
-        <a href="/coursjsp_war_exploded/personne" target="_blank">Personne</a>
+        <a href="/coursjsp_war_exploded/personne?operation=lister" target="_blank">Personne</a>
     </li>
 </ul>
 </body>
