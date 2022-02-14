@@ -8,9 +8,11 @@
 <h1>
     Accueil
 </h1>
-<c:url value="/personne" var="lien_personne" />
-<a href="${ lien_personne }">Personne</a>
-<c:set scope="page" var="variable" value="${22}" />
+<c:url value="/personne" var="lien_menu_personne">
+    <c:param name="operation" value="menu"/>
+</c:url>
+<a href="${ lien_menu_personne }">Menu personne</a>
+<%--<c:set scope="page" var="variable" value="${22}" />
 <c:choose>
     <c:when test="${variable <= 5}">
         <c:out value="<p>inférieur à 5</p>" escapeXml="false"/>
@@ -24,6 +26,6 @@
 </c:choose>
 <c:forEach var="i" begin="0" end="10" step="1">
     <c:out value="<p>${ i }</p>" escapeXml="false"/>
-</c:forEach>
+</c:forEach>--%>
 </body>
 </html>
