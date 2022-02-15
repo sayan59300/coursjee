@@ -3,10 +3,10 @@ package com.emplodutemps.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class EnploiDuTemps implements Serializable {
+public class EmploiDuTemps implements Serializable {
     private final ArrayList<Creneau> semaine = new ArrayList<>();
 
-    public EnploiDuTemps() {
+    public EmploiDuTemps() {
     }
 
     public ArrayList<Creneau> getSemaine() {

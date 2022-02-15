@@ -14,13 +14,35 @@ import java.util.ArrayList;
 public class EmploiDuTempsServlet extends HttpServlet {
     private static final String FILE_NAME = "C:\\Users\\sayan593\\Documents\\semaine.txt";
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ArrayList<Creneau> liste = new ArrayList<Creneau>();
+        try {
+            FileInputStream fis = new FileInputStream(FILE_NAME);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            liste = (ArrayList<Creneau>) ois.readObject();
+            request.setAttribute("liste", liste);
+            String[] jours = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"};
+            request.setAttribute("jours", jours);
+            this.getServletContext().getRequestDispatcher("/WEB-INF/semaine/semaine.jsp").forward(request, response);
+            ois.close();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ArrayList<Creneau> liste = new ArrayList<Creneau>();
+        Creneau creneau = new Creneau((String) request.getParameter("jour"),
+                (String) request.getParameter("heure-debut"),
+                (String) request.getParameter("heure-fin"),
+                (String) request.getParameter("matiere")
+        );
+        liste = getAncienneListe();
+        liste.add(creneau);
+        serializeNouvelleListe(liste);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/semaine/semaine.jsp").forward(request, response);
     }
 
 
