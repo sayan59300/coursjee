@@ -37,35 +37,35 @@
         <td>8:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and creneau.heureDebut eq '8:30'}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 1)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and creneau.heureDebut eq '8:30'}">
+                <c:if test="${ creneau.jour eq 'Mardi' and creneau.heureDebut == 1}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and creneau.heureDebut eq '8:30'}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and creneau.heureDebut == 1}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and creneau.heureDebut eq '8:30'}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and creneau.heureDebut == 1}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and creneau.heureDebut eq '8:30'}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and creneau.heureDebut == 1}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -75,35 +75,35 @@
         <td>9:00</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '9:00' or creneau.heureFin eq '9:00')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 2 or creneau.heureFin >= 2)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '9:00' or creneau.heureFin eq '9:00')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 2 or creneau.heureFin >= 2)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '9:00' or creneau.heureFin eq '9:00')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 2 or creneau.heureFin >= 2)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '9:00' or creneau.heureFin eq '9:00')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 2 or creneau.heureFin >= 2)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '9:00' or creneau.heureFin eq '9:00')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 2 or creneau.heureFin >= 2)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -113,35 +113,35 @@
         <td>9:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '9:30' or creneau.heureFin eq '9:30')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 3 or creneau.heureFin >= 3)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '9:30' or creneau.heureFin eq '9:30')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 3 or creneau.heureFin >= 3)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '9:30' or creneau.heureFin eq '9:30')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 3 or creneau.heureFin >= 3)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '9:30' or creneau.heureFin eq '9:30')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 3 or creneau.heureFin >= 3)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '9:30' or creneau.heureFin eq '9:30')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 3 or creneau.heureFin >= 3)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -151,35 +151,35 @@
         <td>10:00</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '10:00' or creneau.heureFin eq '10:00')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 4 or creneau.heureFin >= 4)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '10:00' or creneau.heureFin eq '10:00')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 4 or creneau.heureFin >= 4)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '10:00' or creneau.heureFin eq '10:00')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 4 or creneau.heureFin >= 4)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '10:00' or creneau.heureFin eq '10:00')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 4 or creneau.heureFin >= 4)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '10:00' or creneau.heureFin eq '10:00')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 4 or creneau.heureFin >= 4)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -189,35 +189,35 @@
         <td>10:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '10:30' or creneau.heureFin eq '10:30')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 5 or creneau.heureFin >= 5)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '10:30' or creneau.heureFin eq '10:30')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 5 or creneau.heureFin >= 5)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '10:30' or creneau.heureFin eq '10:30')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 5 or creneau.heureFin >= 5)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '10:30' or creneau.heureFin eq '10:30')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 5 or creneau.heureFin >= 5)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '10:30' or creneau.heureFin eq '10:30')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 5 or creneau.heureFin >= 5)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -227,35 +227,35 @@
         <td>11:00</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '11:00' or creneau.heureFin eq '11:00')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 6 or creneau.heureFin >= 6)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '11:00' or creneau.heureFin eq '11:00')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 6 or creneau.heureFin >= 6)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '11:00' or creneau.heureFin eq '11:00')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 6 or creneau.heureFin >= 6)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '11:00' or creneau.heureFin eq '11:00')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 6 or creneau.heureFin >= 6)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '11:00' or creneau.heureFin eq '11:00')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 6 or creneau.heureFin >= 6)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -265,35 +265,35 @@
         <td>11:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '11:30' or creneau.heureFin eq '11:30')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 7 or creneau.heureFin >= 7)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '11:30' or creneau.heureFin eq '11:30')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 7 or creneau.heureFin >= 7)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '11:30' or creneau.heureFin eq '11:30')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 7 or creneau.heureFin >= 7)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '11:30' or creneau.heureFin eq '11:30')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 7 or creneau.heureFin >= 7)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '11:30' or creneau.heureFin eq '11:30')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 7 or creneau.heureFin >= 7)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -303,35 +303,35 @@
         <td>12:00</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '12:00' or creneau.heureFin eq '12:00')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 8 or creneau.heureFin >= 8)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '12:00' or creneau.heureFin eq '12:00')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 8 or creneau.heureFin >= 8)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '12:00' or creneau.heureFin eq '12:00')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 8 or creneau.heureFin >= 8)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '12:00' or creneau.heureFin eq '12:00')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 8 or creneau.heureFin >= 8)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '12:00' or creneau.heureFin eq '12:00')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 8 or creneau.heureFin >= 8)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -341,35 +341,35 @@
         <td>12:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '12:30' or creneau.heureFin eq '12:30')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 9 or creneau.heureFin >= 9)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '12:30' or creneau.heureFin eq '12:30')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 9 or creneau.heureFin >= 9)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '12:30' or creneau.heureFin eq '12:30')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 9 or creneau.heureFin >= 9)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '12:30' or creneau.heureFin eq '12:30')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 9 or creneau.heureFin >= 9)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '12:30' or creneau.heureFin eq '12:30')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 9 or creneau.heureFin >= 9)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -379,35 +379,35 @@
         <td>13:00</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '13:00' or creneau.heureFin eq '13:00')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 10 or creneau.heureFin >= 10)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '13:00' or creneau.heureFin eq '13:00')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 10 or creneau.heureFin >= 10)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '13:00' or creneau.heureFin eq '13:00')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 10 or creneau.heureFin >= 10)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '13:00' or creneau.heureFin eq '13:00')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 10 or creneau.heureFin >= 10)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '13:00' or creneau.heureFin eq '13:00')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 10 or creneau.heureFin >= 10)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -417,35 +417,35 @@
         <td>13:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '13:30' or creneau.heureFin eq '13:30')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 11 or creneau.heureFin >= 11)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '13:30' or creneau.heureFin eq '13:30')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 11 or creneau.heureFin >= 11)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '13:30' or creneau.heureFin eq '13:30')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 11 or creneau.heureFin >= 11)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '13:30' or creneau.heureFin eq '13:30')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 11 or creneau.heureFin >= 11)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '13:30' or creneau.heureFin eq '13:30')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 11 or creneau.heureFin >= 11)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -455,35 +455,35 @@
         <td>14:00</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '14:00' or creneau.heureFin eq '14:00')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 12 or creneau.heureFin >= 12)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '14:00' or creneau.heureFin eq '14:00')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 12 or creneau.heureFin >= 12)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '14:00' or creneau.heureFin eq '14:00')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 12 or creneau.heureFin >= 12)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '14:00' or creneau.heureFin eq '14:00')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 12 or creneau.heureFin >= 12)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '14:00' or creneau.heureFin eq '14:00')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 12 or creneau.heureFin >= 12)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -493,35 +493,35 @@
         <td>14:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '14:30' or creneau.heureFin eq '14:30')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 13 or creneau.heureFin >= 13)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '14:30' or creneau.heureFin eq '14:30')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 13 or creneau.heureFin >= 13)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '14:30' or creneau.heureFin eq '14:30')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 13 or creneau.heureFin >= 13)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '14:30' or creneau.heureFin eq '14:30')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 13 or creneau.heureFin >= 13)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '14:30' or creneau.heureFin eq '14:30')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 13 or creneau.heureFin >= 13)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -531,35 +531,35 @@
         <td>15:00</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '15:00' or creneau.heureFin eq '15:00')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 14 or creneau.heureFin >= 14)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '15:00' or creneau.heureFin eq '15:00')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 14 or creneau.heureFin >= 14)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '15:00' or creneau.heureFin eq '15:00')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 14 or creneau.heureFin >= 14)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '15:00' or creneau.heureFin eq '15:00')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 14 or creneau.heureFin >= 14)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '15:00' or creneau.heureFin eq '15:00')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 14 or creneau.heureFin >= 14)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -569,35 +569,35 @@
         <td>15:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '15:30' or creneau.heureFin eq '15:30')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 15 or creneau.heureFin >= 15)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '15:30' or creneau.heureFin eq '15:30')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 15 or creneau.heureFin >= 15)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '15:30' or creneau.heureFin eq '15:30')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 15 or creneau.heureFin >= 15)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '15:30' or creneau.heureFin eq '15:30')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 15 or creneau.heureFin >= 15)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '15:30' or creneau.heureFin eq '15:30')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 15 or creneau.heureFin >= 15)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -607,35 +607,35 @@
         <td>16:00</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '16:00' or creneau.heureFin eq '16:00')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 16 or creneau.heureFin >= 16)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '16:00' or creneau.heureFin eq '16:00')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 16 or creneau.heureFin >= 16)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '16:00' or creneau.heureFin eq '16:00')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 16 or creneau.heureFin >= 16)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '16:00' or creneau.heureFin eq '16:00')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 16 or creneau.heureFin >= 16)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '16:00' or creneau.heureFin eq '16:00')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 16 or creneau.heureFin >= 16)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -645,35 +645,35 @@
         <td>16:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '16:30' or creneau.heureFin eq '16:30')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 17 or creneau.heureFin >= 17)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '16:30' or creneau.heureFin eq '16:30')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 17 or creneau.heureFin >= 17)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '16:30' or creneau.heureFin eq '16:30')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 17 or creneau.heureFin >= 17)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '16:30' or creneau.heureFin eq '16:30')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 17 or creneau.heureFin >= 17)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '16:30' or creneau.heureFin eq '16:30')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 17 or creneau.heureFin >= 17)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -683,35 +683,35 @@
         <td>17:00</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '17:00' or creneau.heureFin eq '17:00')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 18 or creneau.heureFin >= 18)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '17:00' or creneau.heureFin eq '17:00')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 18 or creneau.heureFin >= 18)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '17:00' or creneau.heureFin eq '17:00')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 18 or creneau.heureFin >= 18)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '17:00' or creneau.heureFin eq '17:00')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 18 or creneau.heureFin >= 18)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '17:00' or creneau.heureFin eq '17:00')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 18 or creneau.heureFin >= 18)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -721,35 +721,35 @@
         <td>17:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '17:30' or creneau.heureFin eq '17:30')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 19 or creneau.heureFin >= 19)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '17:30' or creneau.heureFin eq '17:30')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 19 or creneau.heureFin >= 19)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '17:30' or creneau.heureFin eq '17:30')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 19 or creneau.heureFin >= 19)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '17:30' or creneau.heureFin eq '17:30')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 19 or creneau.heureFin >= 19)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '17:30' or creneau.heureFin eq '17:30')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 19 or creneau.heureFin >= 19)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -759,35 +759,35 @@
         <td>18:00</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '18:00' or creneau.heureFin eq '18:00')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 20 or creneau.heureFin >= 20)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '18:00' or creneau.heureFin eq '18:00')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 20 or creneau.heureFin >= 20)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '18:00' or creneau.heureFin eq '18:00')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 20 or creneau.heureFin >= 20)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '18:00' or creneau.heureFin eq '18:00')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 20 or creneau.heureFin >= 20)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '18:00' or creneau.heureFin eq '18:00')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 20 or creneau.heureFin >= 20)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
@@ -797,44 +797,42 @@
         <td>18:30</td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut eq '18:30' or creneau.heureFin eq '18:30')}">
+                <c:if test="${ creneau.jour eq 'Lundi' and (creneau.heureDebut == 21 or creneau.heureFin >= 21)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut eq '18:30' or creneau.heureFin eq '18:30')}">
+                <c:if test="${ creneau.jour eq 'Mardi' and (creneau.heureDebut == 21 or creneau.heureFin >= 21)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut eq '18:30' or creneau.heureFin eq '18:30')}">
+                <c:if test="${ creneau.jour eq 'Mercredi' and (creneau.heureDebut == 21 or creneau.heureFin >= 21)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut eq '18:30' or creneau.heureFin eq '18:30')}">
+                <c:if test="${ creneau.jour eq 'Jeudi' and (creneau.heureDebut == 21 or creneau.heureFin >= 21)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
         <td>
             <c:forEach items="${liste}" var="creneau">
-                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut eq '18:30' or creneau.heureFin eq '18:30')}">
+                <c:if test="${ creneau.jour eq 'Vendredi' and (creneau.heureDebut == 21 or creneau.heureFin >= 21)}">
                     <c:out value="${creneau.matiere}"/>
                 </c:if>
             </c:forEach>
         </td>
     </tr>
 </table>
-<c:url value="/emploi-du-temps" var="lien_ajouter_creneau">
-    <c:param name="operation" value="ajouter"/>
-</c:url>
+<c:url value="/emploi-du-temps" var="lien_ajouter_creneau"/>
 <p>Entrez un créneau à ajouter :</p>
 <form action="${lien_ajouter_creneau}" method="post">
     <div>
@@ -850,53 +848,53 @@
     <div>
         <label for="heure-debut">Heure de début : </label>
         <select name="heure-debut" id="heure-debut">
-            <option value="8:30">8:30</option>
-            <option value="9:00">9:00</option>
-            <option value="9:30">9:30</option>
-            <option value="10:00">10:00</option>
-            <option value="10:30">10:30</option>
-            <option value="11:00">11:00</option>
-            <option value="11:30">11:30</option>
-            <option value="12:00">12:00</option>
-            <option value="12:30">12:30</option>
-            <option value="13:00">13:00</option>
-            <option value="13:30">13:30</option>
-            <option value="14:00">14:00</option>
-            <option value="14:30">14:30</option>
-            <option value="15:00">15:00</option>
-            <option value="15:30">15:30</option>
-            <option value="16:00">16:00</option>
-            <option value="16:30">16:30</option>
-            <option value="17:00">17:00</option>
-            <option value="17:30">17:30</option>
-            <option value="18:00">18:00</option>
-            <option value="18:30">18:30</option>
+            <option value="1">8:30</option>
+            <option value="2">9:00</option>
+            <option value="3">9:30</option>
+            <option value="4">10:00</option>
+            <option value="5">10:30</option>
+            <option value="6">11:00</option>
+            <option value="7">11:30</option>
+            <option value="8">12:00</option>
+            <option value="9">12:30</option>
+            <option value="10">13:00</option>
+            <option value="11">13:30</option>
+            <option value="12">14:00</option>
+            <option value="13">14:30</option>
+            <option value="14">15:00</option>
+            <option value="15">15:30</option>
+            <option value="16">16:00</option>
+            <option value="17">16:30</option>
+            <option value="18">17:00</option>
+            <option value="19">17:30</option>
+            <option value="20">18:00</option>
+            <option value="21">18:30</option>
         </select>
     </div>
     <div>
         <label for="heure-fin">Heure de fin : </label>
         <select name="heure-fin" id="heure-fin">
-            <option value="8:30">8:30</option>
-            <option value="9:00">9:00</option>
-            <option value="9:30">9:30</option>
-            <option value="10:00">10:00</option>
-            <option value="10:30">10:30</option>
-            <option value="11:00">11:00</option>
-            <option value="11:30">11:30</option>
-            <option value="12:00">12:00</option>
-            <option value="12:30">12:30</option>
-            <option value="13:00">13:00</option>
-            <option value="13:30">13:30</option>
-            <option value="14:00">14:00</option>
-            <option value="14:30">14:30</option>
-            <option value="15:00">15:00</option>
-            <option value="15:30">15:30</option>
-            <option value="16:00">16:00</option>
-            <option value="16:30">16:30</option>
-            <option value="17:00">17:00</option>
-            <option value="17:30">17:30</option>
-            <option value="18:00">18:00</option>
-            <option value="18:30">18:30</option>
+            <option value="1">8:30</option>
+            <option value="2">9:00</option>
+            <option value="3">9:30</option>
+            <option value="4">10:00</option>
+            <option value="5">10:30</option>
+            <option value="6">11:00</option>
+            <option value="7">11:30</option>
+            <option value="8">12:00</option>
+            <option value="9">12:30</option>
+            <option value="10">13:00</option>
+            <option value="11">13:30</option>
+            <option value="12">14:00</option>
+            <option value="13">14:30</option>
+            <option value="14">15:00</option>
+            <option value="15">15:30</option>
+            <option value="16">16:00</option>
+            <option value="17">16:30</option>
+            <option value="18">17:00</option>
+            <option value="19">17:30</option>
+            <option value="20">18:00</option>
+            <option value="21">18:30</option>
         </select>
     </div>
     <div>
@@ -904,7 +902,7 @@
         <input type="text" name="matiere" id="matiere">
     </div>
     <div>
-        <input type="button" name="ajouter" value="Ajouter">
+        <input type="submit" name="ajouter" value="Ajouter">
     </div>
 </form>
 </body>
