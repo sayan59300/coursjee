@@ -1,14 +1,12 @@
 package com.session.model;
 
-import java.io.*;
-import java.util.ArrayList;
+import java.io.Serializable;
 
 /**
  * Model Produit
  */
 public class Produit implements Serializable {
-    private static final String PATH = "C:\\Users\\sayaj\\Documents\\image-session\\";
-    private static final String FILE_NAME = "C:\\Users\\sayaj\\Documents\\produits.txt";
+    private static final long serialVersionUID = 3088361603638804314L;
     private int id;
     private String libelle;
     private double prix;
@@ -21,7 +19,7 @@ public class Produit implements Serializable {
         this.id = id;
         this.libelle = libelle;
         this.prix = prix;
-        this.image = PATH + image;
+        this.image = image;
     }
 
     public int getId() {
@@ -53,56 +51,7 @@ public class Produit implements Serializable {
     }
 
     public void setImage(String image) {
-        this.image = PATH + image;
+        this.image = image;
     }
 
-    /**
-     * Retourne la liste des produits stockés dans le fichier
-     *
-     * @return
-     */
-    public ArrayList<Produit> getProduits() {
-        return getListe();
-    }
-
-    /**
-     * Ajoute un produit à la liste
-     */
-    public void ajouterProduit() {
-        ArrayList<Produit> liste = getListe();
-        liste.add(this);
-        serializeNouvelleListe(liste);
-    }
-
-    /**
-     * Recupère le contenu du fichier dans une liste
-     *
-     * @return ArrayList<Produit>
-     */
-    private ArrayList<Produit> getListe() {
-        ArrayList<Produit> liste = new ArrayList<Produit>();
-        try {
-            FileInputStream oldFile = new FileInputStream(FILE_NAME);
-            ObjectInputStream oldObject = new ObjectInputStream(oldFile);
-            liste = (ArrayList<Produit>) oldObject.readObject();
-            oldObject.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return liste;
-    }
-
-    /**
-     * serialize la nouvelle liste
-     */
-    private void serializeNouvelleListe(ArrayList<Produit> nouvelleListe) {
-        try {
-            FileOutputStream file = new FileOutputStream(FILE_NAME);
-            ObjectOutputStream object = new ObjectOutputStream(file);
-            object.writeObject(nouvelleListe);
-            object.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }
