@@ -8,7 +8,7 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-6 offset-1">
+        <div class="col-12">
             <h1>Ajouter un produit</h1>
             <c:url value="/stock" var="lien_stock"/>
             <form action="${lien_stock}" method="post">

@@ -13,6 +13,7 @@
         </div>
     </div>
     <c:url value="/" var="lien_accueil"/>
+    <c:url value="/panier-client" var="lien_ajouter_article"/>
     <div class="row">
         <c:forEach items="${liste}" var="produit">
             <div class="col-3">
@@ -24,7 +25,10 @@
                             <c:out value="${produit.libelle}"/>
                         </h5>
                         <p class="card-text">Prix : <c:out value="${produit.prix}"/></p>
-                        <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                        <form action="${lien_ajouter_article}" method="post">
+                            <input type="hidden" name="id" value="${produit.id}">
+                            <input class="btn btn-primary" type="submit" value="Ajouter au panier">
+                        </form>
                     </div>
                 </div>
             </div>
