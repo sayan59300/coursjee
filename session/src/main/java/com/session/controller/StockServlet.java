@@ -21,6 +21,6 @@ public class StockServlet extends HttpServlet {
         String image = request.getParameter("image");
         Produit produit = new Produit(id, libelle, prix, image);
         Stock.ajouterProduit(produit);
-        this.getServletContext().getRequestDispatcher("/").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/liste-produit").forward(request, response);
     }
 }

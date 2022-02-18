@@ -30,9 +30,6 @@ dist/
 nbdist/
 .nb-gradle/
 
-### Jetbrains ###
-.idea/
-
 ### Composer ###
 vendor/
 composer.lock

@@ -12,11 +12,11 @@
             <h1>Liste des produits</h1>
         </div>
     </div>
-    <c:url value="/" var="lien_accueil"/>
+    <c:url value="/ajouter-produit" var="lien_ajout_produit"/>
     <c:url value="/panier-client" var="lien_ajouter_article"/>
     <div class="row">
         <c:forEach items="${liste}" var="produit">
-            <div class="col-3">
+            <div class="col-4">
                 <div class="card" style="width: 18rem;">
                     <img src="<c:out value="${produit.image}"/>" class="card-img-top"
                          alt="<c:out value="${produit.libelle}"/>">
@@ -35,8 +35,8 @@
         </c:forEach>
     </div>
     <div class="row">
-        <div class="col-3">
-            <a class="btn btn-success" href="${lien_accueil}">Retour à l'accueil</a>
+        <div class="col-3 mt-3">
+            <a class="btn btn-primary" href="${lien_ajout_produit}">Ajouter un produit</a>
         </div>
     </div>
 </div>

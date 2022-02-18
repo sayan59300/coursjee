@@ -7,21 +7,24 @@
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body>
+<c:url value="/connexion" var="lien_connexion"/>
 <div class="container-fluid">
-    <h1>
-        Accueil
-    </h1>
-    <c:url scope="application" value="/ajouter-produit" var="lien_ajout_produit"/>
-    <div>
-        <a class="btn btn-primary mt-3" href="${lien_ajout_produit}">Ajouter un produit</a>
-    </div>
-    <c:url scope="application" value="/liste-produit" var="lien_liste_produit"/>
-    <div>
-        <a class="btn btn-primary mt-3" href="${lien_liste_produit}">Liste des produits</a>
-    </div>
-    <c:url scope="application" value="/panier" var="lien_accueil_panier"/>
-    <div>
-        <a class="btn btn-primary mt-3" href="${lien_accueil_panier}">Panier</a>
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <form action="${lien_connexion}" method="POST">
+                    <label for="login">
+                        Nom d'utilisateur
+                    </label>
+                    <input class="form-control" type="text" required name="login" id="login"/>
+                    <label for="password">
+                        Mot de passe
+                    </label>
+                    <input class="form-control" type="text" required name="password" id="password"/>
+                    <input class="btn btn-success mt-3" type="submit" value="connexion"/>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 </body>
