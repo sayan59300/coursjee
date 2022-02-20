@@ -33,3 +33,9 @@ nbdist/
 ### Composer ###
 vendor/
 composer.lock
+
+###Java###
+*/.idea
+*/target/session-1.0-SNAPSHOT/META-INF/MANIFEST.MF
+*/.idea/uiDesigner.xml
+*/.idea/jsLibraryMappings.xml
