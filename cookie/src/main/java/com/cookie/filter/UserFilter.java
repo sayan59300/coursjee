@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.sql.Array;
+import java.util.ArrayList;
 
 /**
  * Servlet Filter implementation class UserFilter
@@ -43,11 +44,11 @@ public class UserFilter extends HttpFilter implements Filter {
         // on récupère le nom de la session
         User connectedUser = (User) session.getAttribute("user");
         // on récupère le cookie
-        Cookie[] cookies = {};
-        cookies = ((HttpServletRequest) request).getCookies();
         String userCookie = null;
-        for (Cookie cookie : cookies) {
-            if (cookie.getName().equals("userCookie")) userCookie = cookie.getValue();
+        if ((((HttpServletRequest) request).getCookies()) != null) {
+            for (Cookie cookie : ((HttpServletRequest) request).getCookies()) {
+                if (cookie.getName().equals("userCookie")) userCookie = cookie.getValue();
+            }
         }
         // on récupère le chemin demandé par l'utilisateur
         String chemin = req.getServletPath();
