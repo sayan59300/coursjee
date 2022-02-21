@@ -4,10 +4,7 @@ import com.cookie.model.User;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.HttpFilter;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 /**
@@ -44,12 +41,18 @@ public class UserFilter extends HttpFilter implements Filter {
 
         // on récupère le nom de la session
         User connectedUser = (User) session.getAttribute("user");
+        // on récupère le cookie
+        Cookie[] cookies = ((HttpServletRequest) request).getCookies();
+        String userCookie = null;
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("userCookie")) userCookie = cookie.getValue();
+        }
         // on récupère le chemin demandé par l'utilisateur
         String chemin = req.getServletPath();
         // on récupère la methode HTTP utilisée (GET ou POST)
         String methode = req.getMethod();
 
-        if (connectedUser != null || chemin.equals("/") || chemin.equals("/index.jsp") || chemin.equals("/connexion") && methode.equals("POST")) {
+        if (connectedUser != null || userCookie != null || chemin.equals("/") || chemin.equals("/index.jsp") || chemin.equals("/connexion") && methode.equals("POST")) {
             chain.doFilter(request, response);//on donne l'accès a la ressource demandé
         } else {
             res.sendRedirect(req.getContextPath());

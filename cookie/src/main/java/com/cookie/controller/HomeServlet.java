@@ -10,6 +10,14 @@ public class HomeServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+        Cookie[] cookies = ((HttpServletRequest) request).getCookies();
+        Cookie userCookie = null;
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("userCookie")){
+                userCookie = cookie;
+            }
+        }
+        response.addCookie(userCookie);
         this.getServletContext().getRequestDispatcher("/").forward(request, response);
 
     }

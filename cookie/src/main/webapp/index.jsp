@@ -9,6 +9,13 @@
 <body>
 <c:url value="/connexion" var="lien_connexion"/>
 <div class="container-fluid">
+    <c:set value="" var="userCookie"/>
+    <c:forEach items="${pageContext.request.cookies}" var="cookie">
+        <c:if test="${cookie.get('userCookie').getName() == 'userCookie'}">
+            ${userCookie = cookie.get('userCookie').getValue()}
+        </c:if>
+    </c:forEach>
+    <c:if test="${sessionScope.user == null && userCookie == ''}">
     <div class="row">
         <div class="col-4">
             <h1>Connexion</h1>
@@ -27,6 +34,18 @@
             </div>
         </div>
     </div>
+    </c:if>
+    <c:if test="${sessionScope.user != null || userCookie != ''}">
+        <div class="row">
+            <div class="col-4">
+                <h1>Connecté</h1>
+                <c:url value="/deconnect" var="lien_deconnexion"/>
+                <form action="${lien_deconnexion}">
+                    <input class="btn btn-danger" type="submit" value="Déconnexion">
+                </form>
+            </div>
+        </div>
+    </c:if>
 </div>
 </body>
 </html>
