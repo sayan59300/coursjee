@@ -30,7 +30,6 @@ public class DeconnectServlet extends HttpServlet {
 
         Cookie[] cookies = request.getCookies();
         for (Cookie cookie : cookies) {
-            System.out.println(cookie.getValue());
             if (cookie.getName().equals("userCookie")){
                 cookie.setMaxAge(0);
                 cookie.setValue("");

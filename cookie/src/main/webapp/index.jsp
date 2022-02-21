@@ -12,7 +12,7 @@
     <c:set value="" var="userCookie"/>
     <c:forEach items="${pageContext.request.cookies}" var="cookie">
         <c:if test="${cookie.get('userCookie').getName() == 'userCookie'}">
-            ${userCookie = cookie.get('userCookie').getValue()}
+            <c:set value="${cookie.get('userCookie').getValue()}" var="userCookie"/>
         </c:if>
     </c:forEach>
     <c:if test="${sessionScope.user == null && userCookie == ''}">
