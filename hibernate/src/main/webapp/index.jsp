@@ -7,7 +7,10 @@
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body>
-<c:url value="/personne" var="lien_personne"/>
+<c:url value="/personne" var="lien_personne">
+    <c:param name="nom" value="BUFFART"/>
+    <c:param name="prenom" value="Nicolas"/>
+</c:url>
 <div class="container-fluid">
     <div class="row">
         <div class="col-4">

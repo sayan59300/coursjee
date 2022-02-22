@@ -1,10 +1,10 @@
-package org.orm.hibernate.controller;
+package org.orm.coursorm.controller;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.orm.hibernate.model.Personne;
+import org.orm.coursorm.model.Personne;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
