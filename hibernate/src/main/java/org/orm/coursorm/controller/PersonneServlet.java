@@ -30,7 +30,8 @@ public class PersonneServlet extends HttpServlet {
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.persist(personne);//insert into
+        //session.persist(personne);//insert into
+        int id = (Integer) session.save(personne);//insert into et retourne l'id
         transaction.commit();
         session.close();
         sessionFactory.close();
