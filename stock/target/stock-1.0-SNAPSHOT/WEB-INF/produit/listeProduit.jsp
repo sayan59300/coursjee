@@ -12,7 +12,7 @@
         <p>Libellé : <c:out value="${produit.libelle}"/></p>
         <p>Référence : <c:out value="${produit.reference}"/></p>
         <p>Prix : <c:out value="${produit.prix}"/></p>
-        <hr>
+        <hr/>
     </c:forEach>
 </div>
 </body>

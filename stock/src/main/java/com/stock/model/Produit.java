@@ -55,8 +55,8 @@ public class Produit {
         return reference;
     }
 
-    public Produit setReference(String image) {
-        this.reference = image;
+    public Produit setReference(String reference) {
+        this.reference = reference;
         return this;
     }
 }
