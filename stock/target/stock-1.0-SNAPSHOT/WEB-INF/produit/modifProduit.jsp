@@ -20,12 +20,9 @@
             <label for="reference">Référence</label>
             <input class="form-control" type="text" id="reference" name="reference" value="${produit.reference}">
             <input class=" btn btn-primary mt-3" type="submit" value="Enregistrer les modifications">
+            <input class=" btn btn-danger mt-3" type="submit" value="Supprimer" formaction="${lien_delete_produit}"
+                   onclick="return confirm('Etes vous sur de vouloir supprimer cette entrée ?');">
         </div>
-    </form>
-    <form action="${lien_delete_produit}" method="post">
-        <input type="hidden" name="id" value="${produit.id}">
-        <input class="btn btn-danger" type="submit" name="delete" value="Supprimer"
-               onclick="return confirm('Etes vous sur de vouloir supprimer cette entrée ?');">
     </form>
 </div>
 </body>

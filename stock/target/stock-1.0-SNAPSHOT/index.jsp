@@ -7,12 +7,26 @@
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body>
+<c:url value="/connexion" var="lien_connexion"/>
 <div class="container-fluid">
-    <c:url value="/produit/ajouter" var="lien_ajout_produit"/>
-    <c:url value="/produit/liste" var="lien_liste_produit"/>
-    <h1>Gestion des stocks</h1>
-    <div><a class="btn btn-primary mt-3" href="${lien_ajout_produit}">Ajouter un produit</a></div>
-    <div><a class="btn btn-primary mt-3" href="${lien_liste_produit}">Liste des produits</a></div>
+    <div class="row">
+        <div class="col-4">
+            <h1>Accueil</h1>
+            <div class="form-group">
+                <form action="${lien_connexion}" method="POST">
+                    <label for="login">
+                        Nom d'utilisateur
+                    </label>
+                    <input class="form-control" type="text" required name="login" id="login"/>
+                    <label for="password">
+                        Mot de passe
+                    </label>
+                    <input class="form-control" type="text" required name="password" id="password"/>
+                    <input class="btn btn-success mt-3" type="submit" value="connexion"/>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

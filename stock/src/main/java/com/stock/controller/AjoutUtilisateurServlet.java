@@ -1,6 +1,6 @@
 package com.stock.controller;
 
-import com.stock.model.Produit;
+import com.stock.model.Utilisateur;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -13,30 +13,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "AjoutProduitServlet", value = "/produit/ajouter")
-public class AjoutProduitServlet extends HttpServlet {
+@WebServlet(name = "AjoutUtilisateurServlet", value = "/utilisateur/ajouter")
+public class AjoutUtilisateurServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.getServletContext().getRequestDispatcher("/WEB-INF/produit/ajoutProduit.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/produit/ajoutUtilisateur.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String libelle = request.getParameter("libelle");
-        double prix = Double.parseDouble(request.getParameter("prix"));
-        String reference = request.getParameter("reference");
+        String pseudo = request.getParameter("pseudo");
 
-        Produit produit = new Produit();
-        produit.setLibelle(libelle).setPrix(prix).setReference(reference);
+        Utilisateur user = new Utilisateur();
+        user.setPseudo(pseudo);
         Configuration configuration = new Configuration().configure();
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.persist(produit);
+        session.persist(user);
         transaction.commit();
         session.close();
         sessionFactory.close();
-        this.getServletContext().getRequestDispatcher("/WEB-INF/produit/menuProduit.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/").forward(request, response);
     }
 }

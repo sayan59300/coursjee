@@ -28,6 +28,6 @@ public class DeleteProduitServlet extends HttpServlet {
         transaction.commit();
         session.close();
         sessionFactory.close();
-        this.getServletContext().getRequestDispatcher("/").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/produit/menuProduit.jsp").forward(request, response);
     }
 }

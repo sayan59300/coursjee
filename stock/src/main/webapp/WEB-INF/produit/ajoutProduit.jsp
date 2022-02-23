@@ -6,9 +6,7 @@
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body>
-<c:url value="/produit/ajouter" var="lien_enregister_produit">
-    <c:param name="action" value="enregister"/>
-</c:url>
+<c:url value="/produit/ajouter" var="lien_enregister_produit"/>
 <div class="container-fluid">
     <h1>Ajouter un produit</h1>
     <form action="${lien_enregister_produit}" method="post">
