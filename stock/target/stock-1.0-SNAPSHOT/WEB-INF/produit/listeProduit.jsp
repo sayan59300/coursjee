@@ -7,11 +7,16 @@
 </head>
 <body>
 <div class="container-fluid">
+
     <h1>Liste des produits</h1>
     <c:forEach items="${liste}" var="produit">
+        <c:url value="/produit/modifier" var="lien_modif_produit">
+            <c:param name="id" value="${produit.id}"/>
+        </c:url>
         <p>Libellé : <c:out value="${produit.libelle}"/></p>
         <p>Référence : <c:out value="${produit.reference}"/></p>
         <p>Prix : <c:out value="${produit.prix}"/></p>
+        <a class="btn btn-primary" href="${lien_modif_produit}">Modifier le produit</a>
         <hr/>
     </c:forEach>
 </div>
