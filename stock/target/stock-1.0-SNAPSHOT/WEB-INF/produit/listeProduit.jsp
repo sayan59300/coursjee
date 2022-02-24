@@ -30,7 +30,7 @@
                     <form action="${lien_panier}" method="post">
                         <input type="hidden" name="id" value="${produit.id}">
                         <label for="quantite">Quantité</label>
-                        <input class="form-control" type="number" name="quantite" id="quantite" min="1"
+                        <input type="number" name="quantite" id="quantite" min="1"
                                value="${quantite_panier}">
                         <input class="btn btn-success mt-3" type="submit" name="ajouter" value="Ajouter au panier">
                     </form>
