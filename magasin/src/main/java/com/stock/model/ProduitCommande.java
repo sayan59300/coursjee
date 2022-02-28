@@ -61,8 +61,8 @@ public class ProduitCommande {
         return prixTotal;
     }
 
-    public void setPrixTotal(double prixtotal) {
-        this.prixTotal = prixtotal;
+    public void setPrixTotal() {
+        prixTotal = this.produit.getPrix() * this.quantite;
     }
 
     public ProduitCommande withId(int id) {

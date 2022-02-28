@@ -56,6 +56,7 @@
                 <c:set var="total_panier" value="${total_panier + (panier.produit.prix * panier.quantite)}"/>
             </c:forEach>
             <p>Total à payer : <fmt:formatNumber value="${total_panier}" maxFractionDigits="2"/> €</p>
+            <a class="btn btn-success" href="${lien_panier}">Valider la commande</a>
         </div>
     </div>
 </div>

@@ -12,7 +12,7 @@ public class Commande {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private Date dateCommande = new Date();
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @ManyToOne
     private Utilisateur utilisateur;
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, mappedBy = "commande")
     private List<ProduitCommande> produitsCommande = new ArrayList<ProduitCommande>();
