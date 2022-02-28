@@ -1,62 +1,94 @@
 package com.stock.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Produit {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String libelle;
     private double prix;
     private String reference;
+    @OneToMany
+    private List<ProduitCommande> produitsCommande = new ArrayList<ProduitCommande>();
 
     public Produit() {
     }
 
-    public Produit(int id, String libelle, double prix, String image) {
+    public Produit(int id, String libelle, double prix, String reference, List<ProduitCommande> produitsCommande) {
         this.id = id;
         this.libelle = libelle;
         this.prix = prix;
-        this.reference = image;
+        this.reference = reference;
+        this.produitsCommande = produitsCommande;
     }
 
     public int getId() {
         return id;
     }
 
-    public Produit setId(int id) {
+    public void setId(int id) {
         this.id = id;
-        return this;
     }
 
     public String getLibelle() {
         return libelle;
     }
 
-    public Produit setLibelle(String libelle) {
+    public void setLibelle(String libelle) {
         this.libelle = libelle;
-        return this;
     }
 
     public double getPrix() {
         return prix;
     }
 
-    public Produit setPrix(double prix) {
+    public void setPrix(double prix) {
         this.prix = prix;
-        return this;
     }
 
     public String getReference() {
         return reference;
     }
 
-    public Produit setReference(String reference) {
+    public void setReference(String reference) {
         this.reference = reference;
+    }
+
+    public List<ProduitCommande> getProduitsCommande() {
+        return produitsCommande;
+    }
+
+    public void setProduitsCommande(List<ProduitCommande> produitsCommande) {
+        this.produitsCommande = produitsCommande;
+    }
+
+    public Produit withId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    public Produit withLibelle(String libelle) {
+        this.libelle = libelle;
+        return this;
+    }
+
+    public Produit withPrix(double prix) {
+        this.prix = prix;
+        return this;
+    }
+
+    public Produit withReference(String reference) {
+        this.reference = reference;
+        return this;
+    }
+
+    public Produit withProduitsCommande(List<ProduitCommande> produitsCommande) {
+        this.produitsCommande = produitsCommande;
         return this;
     }
 }

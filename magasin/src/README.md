@@ -4,5 +4,5 @@ Exercice : Ajouter au projet les entités et les relations correspondantes à ce
 - Une commande peut contenir plusieurs produits
 - On souhaite pouvoir identifier le client concerné directement depuis l'objet Commande
 - On souhaite pouvoir accéder à la liste des commandes passées par un client directement depuis l'objet Client
-- On souhaite pouvoir accéder à la commande contenant un produit directement depuis l'objet produit.
+- On souhaite pouvoir accéder à la commande contenant un produit directement depuis l'objet produit
 - On souhaite sauvegarder la quantité de chaque produit dans la commande

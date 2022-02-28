@@ -55,7 +55,7 @@
                 </div>
                 <c:set var="total_panier" value="${total_panier + (panier.produit.prix * panier.quantite)}"/>
             </c:forEach>
-            <p>Total à payer : <fmt:formatNumber value="${total_panier}" maxFractionDigits="2"/> €</p>²
+            <p>Total à payer : <fmt:formatNumber value="${total_panier}" maxFractionDigits="2"/> €</p>
         </div>
     </div>
 </div>

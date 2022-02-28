@@ -28,7 +28,7 @@ public class AjoutProduitServlet extends HttpServlet {
         String reference = request.getParameter("reference");
 
         Produit produit = new Produit();
-        produit.setLibelle(libelle).setPrix(prix).setReference(reference);
+        produit.withLibelle(libelle).withPrix(prix).withReference(reference);
         Configuration configuration = new Configuration().configure();
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();

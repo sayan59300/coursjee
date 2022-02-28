@@ -43,7 +43,7 @@ public class ModifProduitServlet extends HttpServlet {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         Produit produit = session.get(Produit.class, id);
-        produit.setLibelle(libelle).setPrix(prix).setReference(reference);
+        produit.withLibelle(libelle).withPrix(prix).withReference(reference);
         session.flush();
         transaction.commit();
         session.close();
