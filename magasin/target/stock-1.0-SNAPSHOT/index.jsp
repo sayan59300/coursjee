@@ -8,6 +8,7 @@
 </head>
 <body>
 <c:url value="/connexion" var="lien_connexion"/>
+<c:url value="/utilisateur/ajouter" var="lien_enregister_utilisateur" scope="application"/>
 <div class="container-fluid">
     <div class="row">
         <div class="col-4">
@@ -25,6 +26,12 @@
                     <input class="btn btn-success mt-3" type="submit" value="connexion"/>
                 </form>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h1>Ajouter utilisateur</h1>
+            <a class="btn btn-primary" href="${lien_enregister_utilisateur}">Ajouter un utilisateur</a>
         </div>
     </div>
 </div>

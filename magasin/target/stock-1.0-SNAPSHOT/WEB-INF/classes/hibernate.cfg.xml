@@ -12,6 +12,8 @@
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
         <mapping class="com.stock.model.Produit"/>
+        <mapping class="com.stock.model.Commande"/>
+        <mapping class="com.stock.model.ProduitCommande"/>
         <mapping class="com.stock.model.Utilisateur"/>
     </session-factory>
 </hibernate-configuration>
