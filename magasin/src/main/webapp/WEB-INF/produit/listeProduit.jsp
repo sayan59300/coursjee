@@ -39,6 +39,7 @@
             </c:forEach>
         </div>
         <div class="col-6">
+            <a class="btn btn-danger mt-3" href="${applicationScope.deconnexion}">Déconnexion</a>
             <h1>Panier</h1>
             <c:set var="total_panier" value="${0}"/>
             <c:forEach items="${sessionScope.paniers}" var="panier">

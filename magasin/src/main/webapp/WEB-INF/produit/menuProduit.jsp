@@ -10,7 +10,7 @@
 <div class="container-fluid">
     <c:url value="/produit/ajouter" var="lien_ajout_produit"/>
     <c:url value="/produit/liste" var="lien_liste_produit"/>
-    <c:url value="/deconnect" var="deconnexion"/>
+    <c:url value="/deconnect" var="deconnexion" scope="application"/>
     <h1>Gestion des stocks</h1>
     <div><a class="btn btn-primary mt-3" href="${lien_ajout_produit}">Ajouter un produit</a></div>
     <div><a class="btn btn-primary mt-3" href="${lien_liste_produit}">Liste des produits</a></div>
