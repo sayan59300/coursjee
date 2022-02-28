@@ -6,10 +6,9 @@
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body>
-<c:url value="/utilisateur/ajouter" var="lien_enregister_produit"/>
 <div class="container-fluid">
     <h1>Ajouter un utilisateur</h1>
-    <form action="${lien_enregister_produit}" method="post">
+    <form action="${applicationScope.lien_enregister_utilisateur}" method="post">
         <div class="form-group">
             <label for="pseudo">Pseudo</label>
             <input class="form-control" type="text" id="pseudo" name="pseudo">
