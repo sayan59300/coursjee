@@ -55,10 +55,6 @@ public class Commande {
         return produitsCommande;
     }
 
-    public void setProduitsCommande(List<ProduitCommande> produitsCommande) {
-        this.produitsCommande = produitsCommande;
-    }
-
     public Commande withId(int id) {
         this.id = id;
         return this;
@@ -74,8 +70,27 @@ public class Commande {
         return this;
     }
 
-    public Commande withProduitsCommande(List<ProduitCommande> produitsCommande) {
-        this.produitsCommande = produitsCommande;
-        return this;
+    public boolean before(Date when) {
+        return dateCommande.before(when);
+    }
+
+    public boolean after(Date when) {
+        return dateCommande.after(when);
+    }
+
+    public int compareTo(Date anotherDate) {
+        return dateCommande.compareTo(anotherDate);
+    }
+
+    public int size() {
+        return produitsCommande.size();
+    }
+
+    public boolean addProduitsCommande(ProduitCommande produitCommande) {
+        return produitsCommande.add(produitCommande);
+    }
+
+    public boolean removeProduitsCommande(ProduitCommande produitCommande) {
+        return produitsCommande.remove(produitCommande);
     }
 }

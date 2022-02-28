@@ -63,10 +63,6 @@ public class Produit {
         return produitsCommande;
     }
 
-    public void setProduitsCommande(List<ProduitCommande> produitsCommande) {
-        this.produitsCommande = produitsCommande;
-    }
-
     public Produit withId(int id) {
         this.id = id;
         return this;
@@ -84,11 +80,6 @@ public class Produit {
 
     public Produit withReference(String reference) {
         this.reference = reference;
-        return this;
-    }
-
-    public Produit withProduitsCommande(List<ProduitCommande> produitsCommande) {
-        this.produitsCommande = produitsCommande;
         return this;
     }
 }
