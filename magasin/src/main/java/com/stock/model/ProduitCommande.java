@@ -7,9 +7,9 @@ public class ProduitCommande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Commande commande;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Produit produit;
     private int quantite;
     private double prixTotal;

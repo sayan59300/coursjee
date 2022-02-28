@@ -11,7 +11,7 @@ public class Utilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String pseudo;
-    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, mappedBy = "utilisateur")
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, mappedBy = "utilisateur", fetch = FetchType.EAGER)
     private List<Commande> commandes = new ArrayList<Commande>();
 
     public Utilisateur(int id, String pseudo) {
