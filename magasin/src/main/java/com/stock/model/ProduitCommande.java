@@ -12,17 +12,17 @@ public class ProduitCommande {
     @ManyToOne
     private Produit produit;
     private int quantite;
-    private double prixtotal;
+    private double prixTotal;
 
     public ProduitCommande() {
     }
 
-    public ProduitCommande(int id, Commande commande, Produit produit, int quantite, double prixtotal) {
+    public ProduitCommande(int id, Commande commande, Produit produit, int quantite, double prixTotal) {
         this.id = id;
         this.commande = commande;
         this.produit = produit;
         this.quantite = quantite;
-        this.prixtotal = prixtotal;
+        this.prixTotal = prixTotal;
     }
 
     public int getId() {
@@ -57,12 +57,12 @@ public class ProduitCommande {
         this.quantite = quantite;
     }
 
-    public double getPrixtotal() {
-        return prixtotal;
+    public double getPrixTotal() {
+        return prixTotal;
     }
 
-    public void setPrixtotal(double prixtotal) {
-        this.prixtotal = prixtotal;
+    public void setPrixTotal(double prixtotal) {
+        this.prixTotal = prixtotal;
     }
 
     public ProduitCommande withId(int id) {
@@ -85,8 +85,8 @@ public class ProduitCommande {
         return this;
     }
 
-    public ProduitCommande withPrixtotal(double prixtotal) {
-        this.prixtotal = prixtotal;
+    public ProduitCommande withPrixTotal(double prixTotal) {
+        this.prixTotal = prixTotal;
         return this;
     }
 }

@@ -14,7 +14,7 @@ public class Commande {
     private Date dateCommande = new Date();
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private Utilisateur utilisateur;
-    @OneToMany
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, mappedBy = "commande")
     private List<ProduitCommande> produitsCommande = new ArrayList<ProduitCommande>();
 
     public Commande() {
