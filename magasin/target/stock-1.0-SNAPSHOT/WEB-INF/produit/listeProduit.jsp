@@ -12,7 +12,7 @@
     <c:url value="/utilisateur/commandes" var="lien_commandes"/>
     <div class="row">
         <div class="col-6">
-            <h1>Liste des produits</h1>
+            <h3>Liste des produits</h3>
             <c:forEach items="${liste}" var="produit">
                 <c:set var="quantite_panier" value=""/>
                 <c:forEach items="${sessionScope.paniers}" var="panier">

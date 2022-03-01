@@ -9,7 +9,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-6">
-            <h1>Vos commandes</h1>
+            <h3>Vos commandes</h3>
             <c:forEach items="${liste}" var="commande">
                 <c:url value="/commande" var="lien_commande">
                     <c:param name="id" value="${commande.id}"/>

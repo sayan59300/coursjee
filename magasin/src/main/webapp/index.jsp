@@ -12,7 +12,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-4">
-            <h1>Accueil</h1>
+            <h3>Accueil</h3>
             <div class="form-group">
                 <form action="${lien_connexion}" method="POST">
                     <label for="login">
@@ -30,7 +30,7 @@
     </div>
     <div class="row">
         <div class="col-4">
-            <h1>Ajouter utilisateur</h1>
+            <h3>Ajouter utilisateur</h3>
             <a class="btn btn-primary" href="${lien_enregister_utilisateur}">Ajouter un utilisateur</a>
         </div>
     </div>

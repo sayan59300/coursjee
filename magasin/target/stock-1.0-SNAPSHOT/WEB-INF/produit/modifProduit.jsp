@@ -9,7 +9,7 @@
 <c:url value="/produit/modifier" var="lien_modif_produit"/>
 <c:url value="/produit/delete" var="lien_delete_produit"/>
 <div class="container-fluid">
-    <h1>Modifier produit</h1>
+    <h3>Modifier produit</h3>
     <form action="${lien_modif_produit}" method="post">
         <div class="form-group">
             <input type="hidden" name="id" value="${produit.id}">

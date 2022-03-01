@@ -8,7 +8,7 @@
 <body>
 <c:url value="/produit/ajouter" var="lien_enregister_produit"/>
 <div class="container-fluid">
-    <h1>Ajouter un produit</h1>
+    <h3>Ajouter un produit</h3>
     <form action="${lien_enregister_produit}" method="post">
         <div class="form-group">
             <label for="libelle">Libellé</label>

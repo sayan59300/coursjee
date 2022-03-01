@@ -9,7 +9,7 @@
 <body>
 <div class="container-fluid">
     <div class="col-6 offset-4">
-        <h1>Panier</h1>
+        <h3>Panier</h3>
         <c:set var="total_panier" value="${0}"/>
         <c:url value="/commande/validation" var="lien_validation_commande"/>
         <c:forEach items="${sessionScope.paniers}" var="panier">

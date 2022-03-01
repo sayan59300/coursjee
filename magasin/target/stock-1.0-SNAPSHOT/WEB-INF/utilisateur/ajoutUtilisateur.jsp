@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container-fluid">
-    <h1>Ajouter un utilisateur</h1>
+    <h3>Ajouter un utilisateur</h3>
     <form action="${applicationScope.lien_enregister_utilisateur}" method="post">
         <div class="form-group">
             <label for="pseudo">Pseudo</label>
