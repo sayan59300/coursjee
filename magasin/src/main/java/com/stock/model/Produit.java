@@ -13,7 +13,7 @@ public class Produit {
     private String libelle;
     private double prix;
     private String reference;
-    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, mappedBy = "produit", fetch = FetchType.EAGER)
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, mappedBy = "produit", fetch = FetchType.LAZY)
     private List<ProduitCommande> produitsCommande = new ArrayList<ProduitCommande>();
 
     public Produit() {

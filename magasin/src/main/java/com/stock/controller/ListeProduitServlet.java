@@ -27,9 +27,9 @@ public class ListeProduitServlet extends HttpServlet {
         Criteria criteria = session.createCriteria(Produit.class);
         List<Produit> produits = (List<Produit>) criteria.list();
         transaction.commit();
-        request.setAttribute("liste", produits);
         session.close();
         sessionFactory.close();
+        request.setAttribute("liste", produits);
         this.getServletContext().getRequestDispatcher("/WEB-INF/produit/listeProduit.jsp").forward(request, response);
     }
 }
