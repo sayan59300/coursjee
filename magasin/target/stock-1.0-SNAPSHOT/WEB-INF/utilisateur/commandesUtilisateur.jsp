@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <title>Vos commandes</title>
@@ -14,7 +15,11 @@
                 <c:url value="/commande" var="lien_commande">
                     <c:param name="id" value="${commande.id}"/>
                 </c:url>
-                <p>Date : <a href="${lien_commande}"><c:out value="${commande.dateCommande}"/></a></p>
+                <p>
+                    Date : <a href="${lien_commande}">
+                    <fmt:formatDate pattern="dd-MM-yyyy" value="${commande.dateCommande}"/>
+                    n° <c:out value="${commande.id}"/></a>
+                </p>
                 <hr/>
             </c:forEach>
         </div>

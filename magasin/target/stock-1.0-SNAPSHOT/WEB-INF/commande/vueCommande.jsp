@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <title>Commande du <c:out value="${commande.dateCommande}"/></title>
@@ -9,7 +10,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h3>Commande du <c:out value="${commande.dateCommande}"/></h3>
+            <h3>
+                Commande du
+                <fmt:formatDate pattern="dd-MM-yyyy" value="${commande.dateCommande}"/>
+            </h3>
             <c:set var="total_commande" value="${0}"/>
             <table class="table">
                 <thead class="thead-dark">
