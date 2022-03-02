@@ -31,7 +31,7 @@ public class UserFilter implements Filter {
         String methode = req.getMethod();
 
         if (connectedUser != null || chemin.equals("/") || chemin.equals("/index.jsp") || chemin.equals("/utilisateur/ajouter") || chemin.equals("/connexion") && methode.equals("POST")) {
-            chain.doFilter(request, response);//on donne l'acces a la ressource demand�e
+            chain.doFilter(request, response);//on donne l'acces a la ressource demandée
         } else {
             res.sendRedirect(req.getContextPath());
         }

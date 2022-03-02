@@ -22,12 +22,12 @@
                 </c:forEach>
                 <p>Libellé : <c:out value="${produit.libelle}"/></p>
                 <p>Référence : <c:out value="${produit.reference}"/></p>
-                <p>Prix : <c:out value="${produit.prix}"/></p>
+                <p>Prix : <c:out value="${produit.prix}"/> €</p>
                 <div class="form-group">
                     <form action="${lien_panier}" method="post">
                         <input type="hidden" name="id" value="${produit.id}">
                         <label for="quantite">Quantité</label>
-                        <input class="form-control col-2" type="number" name="quantite" id="quantite" min="1"
+                        <input class="form-control col-3" type="number" name="quantite" id="quantite" min="1"
                                value="${quantite_panier}">
                         <input class="btn btn-success mt-3" type="submit" name="ajouter" value="Ajouter au panier">
                     </form>

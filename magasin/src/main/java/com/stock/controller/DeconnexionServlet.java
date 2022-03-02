@@ -12,13 +12,13 @@ import java.io.IOException;
  * Servlet implementation class Deconnect
  */
 @WebServlet("/deconnect")
-public class Deconnect extends HttpServlet {
+public class DeconnexionServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Deconnect() {
+    public DeconnexionServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
