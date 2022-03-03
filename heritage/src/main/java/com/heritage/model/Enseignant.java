@@ -5,14 +5,15 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue(value = "ens")
-public class Enseignant extends Personne{
+public class Enseignant extends Personne {
 
     private int salaire;
 
     public Enseignant() {
     }
 
-    public Enseignant(int salaire) {
+    public Enseignant(String nom, String prenom, int salaire) {
+        super(nom, prenom);
         this.salaire = salaire;
     }
 

@@ -30,16 +30,18 @@
     let select = document.getElementById("type")
     let span = document.getElementById("ajout_type")
     select.addEventListener('change', (event) => {
-        if (select.value === "pers") {
-            span.innerHTML = "";
-        } else if (select.value === "etu"){
-            span.innerHTML = '<label for="niveau">Niveau</label><input class="form-control" type="text" name="niveau" id="niveau">';
-        } else if (select.value === "ens"){
-            span.innerHTML = '<label for="salaire">Salaire</label><input class="form-control" type="text" name="salaire" id="salaire">';
-        } else {
-            span.innerHTML = "";
+        switch (select.value) {
+            case "etu" :
+                span.innerHTML = '<label for="niveau">Niveau</label><input class="form-control" type="text" name="niveau" id="niveau">'
+                break
+            case "ens" :
+                span.innerHTML = '<label for="salaire">Salaire</label><input class="form-control" type="text" name="salaire" id="salaire">'
+                break
+            default :
+                span.innerHTML = ''
+                break
         }
-    });
+    })
 </script>
 </body>
 </html>

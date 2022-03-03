@@ -5,15 +5,15 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue(value = "etu")
-public class Etudiant extends Personne{
+public class Etudiant extends Personne {
 
     private String niveau;
 
     public Etudiant() {
     }
 
-    public Etudiant(int id, String nom, String prenom, String niveau) {
-        super(id, nom, prenom);
+    public Etudiant(String nom, String prenom, String niveau) {
+        super(nom, prenom);
         this.niveau = niveau;
     }
 

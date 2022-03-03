@@ -11,9 +11,8 @@
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
-        <!--<mapping class="com.stock.model.Produit"/>
-        <mapping class="com.stock.model.Commande"/>
-        <mapping class="com.stock.model.ProduitCommande"/>
-        <mapping class="com.stock.model.Utilisateur"/>-->
+        <mapping class="com.heritage.model.Personne"/>
+        <mapping class="com.heritage.model.Etudiant"/>
+        <mapping class="com.heritage.model.Enseignant"/>
     </session-factory>
 </hibernate-configuration>

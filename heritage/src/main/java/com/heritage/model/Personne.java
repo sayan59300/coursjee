@@ -4,9 +4,9 @@ import javax.persistence.*;
 
 
 @Entity
-@Inheritance(strategy= InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="type_personne")
-@DiscriminatorValue(value="pers")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "type_personne")
+@DiscriminatorValue(value = "pers")
 public class Personne {
 
     @Id
@@ -18,8 +18,7 @@ public class Personne {
     public Personne() {
     }
 
-    public Personne(int id, String nom, String prenom) {
-        this.id = id;
+    public Personne(String nom, String prenom) {
         this.nom = nom;
         this.prenom = prenom;
     }
