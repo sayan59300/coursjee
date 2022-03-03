@@ -33,10 +33,13 @@ public class AjoutPersonneServlet extends HttpServlet {
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
+
         session.persist(personne);
+
         transaction.commit();
         session.close();
         sessionFactory.close();
+
         response.sendRedirect(request.getContextPath() + "/");
     }
 }

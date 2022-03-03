@@ -25,10 +25,13 @@ public class ListePersonneServlet extends HttpServlet {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         Criteria criteria = session.createCriteria(Personne.class);
+
         List<Personne> personne = (List<Personne>) criteria.list();
+
         transaction.commit();
         session.close();
         sessionFactory.close();
+        
         request.setAttribute("liste", personne);
         this.getServletContext().getRequestDispatcher("/WEB-INF/personne/liste.jsp").forward(request, response);
 
