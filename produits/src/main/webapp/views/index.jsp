@@ -8,8 +8,7 @@
 <body>
 <h1>Accueil</h1>
 <div>
-    <c:url value="/produit" var="lienProduits" scope="application"/>
-    <c:url value="/produit/ajouter" var="ajouterProduit" scope="application"/>
+    <c:url value="/produit" var="lienProduits"/>
     <a href="${lienProduits}">Page produits</a>
 </div>
 </body>

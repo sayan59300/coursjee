@@ -7,11 +7,12 @@
 </head>
 <body>
 <h1>Accueil produits</h1>
-<form action="${applicationScope.ajouterProduit}" method="post">
+<c:url value="/produit/ajouter" var="ajouterProduit"/>
+<form action="${ajouterProduit}" method="post">
 <table>
     <tr>
         <td>Numéro du produit : </td>
-        <td>${produit.id}</td>
+        <td></td>
     </tr>
     <tr>
         <td><label for="nom">Nom du produit</label></td>
@@ -27,5 +28,8 @@
     </tr>
 </table>
 </form>
+<c:forEach items="${produits}" var="produit">
+    <p><c:out value="${produit.nom}"/> : <c:out value="${produit.prix}"/></p>
+</c:forEach>
 </body>
 </html>
