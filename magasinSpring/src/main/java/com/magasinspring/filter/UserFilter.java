@@ -30,7 +30,13 @@ public class UserFilter implements Filter {
         // on recupere la methode HTTP utilisee (GET ou POST)
         String methode = req.getMethod();
 
-        if (connectedUser != null || chemin.equals("/") || chemin.equals("/index.html") || chemin.equals("/utilisateur/ajouter") || chemin.equals("/connexion") && methode.equals("POST")) {
+        if (connectedUser != null
+                || chemin.equals("/")
+                || chemin.equals("/index.html")
+                || chemin.equals("/utilisateur/ajouter")
+                || chemin.equals("/connexion") && methode.equals("POST")
+                || chemin.equals("/deconnexion") && methode.equals("GET")
+                || chemin.equals("/deconnexion") && methode.equals("POST")) {
             chain.doFilter(request, response);//on donne l'acces a la ressource demandée
         } else {
             res.sendRedirect(req.getContextPath());
