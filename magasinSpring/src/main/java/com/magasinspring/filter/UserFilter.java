@@ -35,8 +35,7 @@ public class UserFilter implements Filter {
                 || chemin.equals("/index.html")
                 || chemin.equals("/utilisateur/ajouter")
                 || chemin.equals("/connexion") && methode.equals("POST")
-                || chemin.equals("/deconnexion") && methode.equals("GET")
-                || chemin.equals("/deconnexion") && methode.equals("POST")) {
+                || chemin.equals("/deconnexion")) {
             chain.doFilter(request, response);//on donne l'acces a la ressource demandée
         } else {
             res.sendRedirect(req.getContextPath());

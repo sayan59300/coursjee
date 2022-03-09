@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.RedirectView;
 public class UtilisateurController {
 
     @Autowired
-    UtilisateurRepository utilisateurRepository;
+    private UtilisateurRepository utilisateurRepository;
 
     @GetMapping(value = "/utilisateur/ajouter")
     public String vueAjouter() {
